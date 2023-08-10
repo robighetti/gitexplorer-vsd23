@@ -1,21 +1,23 @@
-import './styles.css'
+import GlobalStyles from './styles/global'
+import { Header } from './components/header/Header'
+import { Content } from './components/content/Content'
+import { Footer } from './components/footer/Footer'
 
-import logo from './assets/logo.png'
+import { Container } from './styles'
 
 const App = () => {
   // Aqui vem o seu codigo javascript = ao node
 
   return (
-    <div className="container">
-      <header className="header">
-        <img src={logo} alt="" />
+    <Container>
+      <GlobalStyles />
 
-        <div className="header-content">
-          <h1>Bem vindo(a) ao GitExplorer</h1>
-          <span>08/08/2023</span>
-        </div>
-      </header>
-    </div>
+      <Header />
+
+      <Content />
+
+      <Footer />
+    </Container>
   )
 }
 
