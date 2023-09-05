@@ -3,6 +3,8 @@ import { Header } from './components/header/Header'
 import { Content } from './components/content/Content'
 import { Footer } from './components/footer/Footer'
 
+import 'react-perfect-scrollbar/dist/css/styles.css'
+
 import { Container } from './styles'
 
 const App = () => {

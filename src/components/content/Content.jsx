@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { FiSearch } from 'react-icons/fi'
+import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import { githubApi } from '../../services/githubApi'
 
@@ -89,15 +90,16 @@ const Content = () => {
         <BioContent>
           <strong>Repositórios do usuário</strong>
 
-          {repos.map((repo, index) => (
-            <Repo key={index}>
-              <strong>{repo.name}</strong>
-              <span>{repo.stack}</span>
-              <a href={repo.url_repo} target="_blank" rel="noreferrer">
-                {repo.name}
-              </a>
-            </Repo>
-          ))}
+          <PerfectScrollbar>
+            {repos.map((repo, index) => (
+              <Repo key={index}>
+                <a href={repo.url_repo} target="_blank" rel="noreferrer">
+                  <strong>{repo.name}</strong>
+                  <span>{repo.stack}</span>
+                </a>
+              </Repo>
+            ))}
+          </PerfectScrollbar>
         </BioContent>
       </MainContent>
     </Container>

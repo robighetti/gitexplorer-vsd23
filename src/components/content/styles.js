@@ -105,20 +105,40 @@ export const Image = styled.img`
 
 export const Repo = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+
   height: 30px;
 
-  strong {
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-  span {
-    font-size: 12px;
+  & + div {
+    margin-bottom: 16px;
   }
 
   a {
+    margin-left: 16px;
     text-decoration: none;
     color: #333;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 32px;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    strong {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    span {
+      margin-left: 16px;
+      font-size: 12px;
+    }
   }
 `
